@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void prime(int a, int b)
+void prime(long long int a, long long int b)
 {
-    int i = 0;
-    int j = 0;
-    int p = 0;
+    long long int i = 0;
+    long long int j = 0;
+    long long int p = 0;
     
     if(a == 1)
     {
@@ -29,7 +29,7 @@ void prime(int a, int b)
         }
        if(p != 0)
        {
-            printf("%d\n", p);
+            printf("%lld\n", p);
             p = 0;
        }
     }
@@ -38,11 +38,11 @@ void prime(int a, int b)
 void main()
 {
     int t = 0;
-    int a = 0;
-    int b = 0;
-    int i = 0;
-    int j = 0;
-    int tab[2][10] = {{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
+    long long int a = 0;
+    long long int b = 0;
+    long long int i = 0;
+    long long int j = 0;
+    long long int tab[2][10] = {{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
     
     scanf("%d", &t);
     if(t <= 0 || t > 10)
@@ -52,10 +52,10 @@ void main()
     
     for(i = 0; i < t; i++)
     {
-        scanf("%d %d", &a, &b);
+        scanf("%lld %lld", &a, &b);
         if(a > b || a < 1 || b >= 1000000000 || b - a >= 100000)
         {
-            scanf("%d %d", &a, &b);
+            scanf("%lld %lld", &a, &b);
         }
         tab[0][i] = a;
         tab[1][i] = b;
